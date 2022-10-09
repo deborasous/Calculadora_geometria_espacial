@@ -1,0 +1,92 @@
+.title {
+  background: dimgray;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  width: 90%;
+  font-size: 1.125rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+}
+
+button{
+  display: block;
+  margin: auto;
+  font-size: 1.125rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background: #ff9d00;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  background: #ffae2c;
+}
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+input {
+  padding: 0.5rem 1rem;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+h2{
+  margin: 0  1rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.render {
+    max-width: 24rem;
+    padding: 2rem;
+    height: 18rem;
+    margin: auto;
+}
+
+.ele_forms {
+  display: flex;
+  width: 100%;
+  margin-bottom: 2rem;
+  justify-content: space-between;
+}
+
+.ele_forms div{
+  display: grid ;
+  padding: 1rem;
+  align-content: center;
+}
+
+.ele_forms .images {
+  height: 4rem;
+  max-width: 9rem;
+  display: block;
+  margin: 1rem auto;
+}
+
+.parameters {
+  display: flex;
+}
+
+.parameters form {
+  padding: 1rem;
+  width: 100%;
+}
+
+
+
+.parameters .result {
+  width: 100%;
+  margin-left: 3rem;
+}

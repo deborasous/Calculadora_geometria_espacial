@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cálcular formas geometricas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="title">
+      <h1>Cálculo de geometria espacial</h1>
+    </header>
+    <main>
+      <img id="render_image" class="render" />
+      <div class="content">
+        <div class="ele_forms">
+          <div>
+            <img src="cylinder.svg" class="images" alt="" />
+            <button id="ci" onclick="changeForm('cylinder')">Cilindro</button>
+          </div>
+          <div>
+            <img src="cone.png" class="images" alt="" /> 
+            <button id="co" onclick="changeForm('cone')">Cone</button>
+          </div>
+          <div>
+            <img src="prism.png" class="images" alt="" />
+            <button id="pr" onclick="changeForm('prism')">Prisma</button>
+          </div>
+          <div>
+            <img src="ball.png" class="images" alt="" />
+            <button id="es" onclick="changeForm('ball')">Esfera</button>
+          </div>
+        </div>
+        <div>
+          <h2>Parâmetro do Objeto</h2>
+          <div class="parameters">
+            <form action="#">
+              <div>
+                <label for="width">Largura (m)</label>
+                <input type="text" id="width" />
+              </div>
+              <div>
+                <label for="height">Altura (m)</label>
+                <input type="text" id="height" />
+              </div>
+              <div>
+                <label for="depth">Profundidade (m)</label>
+                <input type="text" id="depth" />
+              </div>
+              <div>
+                <label for="ray">Raio (m)</label>
+                <input type="text" id="ray" />
+                <button type="submit" id="btn">Cálcular</button>
+              </div>
+            </form>
+            <div class="result">
+              <p>Área</p>
+              <h3 id="area">0</h3>
+
+              <p>Volume</p>
+              <h3 id="vol">0</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
