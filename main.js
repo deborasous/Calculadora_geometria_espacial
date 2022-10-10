@@ -23,21 +23,21 @@ function changeForm(obj) {
     el_height.disabled = false;
     el_depth.disabled = true;
     el_ray.disabled = false;
-    render_img.src = "cone.png";
+    render_img.src = "cone.svg";
     form = "cone";
   } else if (obj == "prism") {
     el_width.disabled = false;
     el_height.disabled = false;
     el_depth.disabled = false;
     el_ray.disabled = true;
-    render_img.src = "prism.png";
+    render_img.src = "prism.svg";
     form = "prism";
   } else if (obj == "ball") {
     el_width.disabled = true;
     el_height.disabled = true;
     el_depth.disabled = true;
     el_ray.disabled = false;
-    render_img.src = "ball.png";
+    render_img.src = "ball.svg";
     form = "ball";
   }
 }
@@ -54,13 +54,13 @@ function calc() {
       2 * (height * width) + 2 * (width * depth) + 2 * (height * depth);
     el_vol.innerHTML = vol_prim.toFixed(2) + "m³";
     el_area.innerHTML = area_prim.toFixed(2) + "m²";
-    render_img.src = "prism.png";
+    render_img.src = "prism.svg";
   } else if (ray > 0 && height == 0 && width == 0 && depth == 0) {
     let vol_ball = (4 * Math.PI * ray * ray * ray) / 3;
     let area_ball = 4 * Math.PI * ray * ray;
     el_vol.innerHTML = vol_ball.toFixed(2) + "m³";
     el_area.innerHTML = area_ball.toFixed(2) + "m²";
-    render_img.src = "ball.png";
+    render_img.src = "ball.svg";
   } else if (ray > 0 && height > 0 && width == 0 && depth == 0) {
     let vol_cylinder = Math.PI * ray * ray * height;
     let area_cylinder = 2 * Math.PI * ray * (ray + height);
@@ -73,6 +73,8 @@ function calc() {
       Math.PI * ray * (ray * Math.sqrt(height * height + ray * ray)); //
     el_vol.innerHTML = vol_cone.toFixed(2) + "m³";
     el_area.innerHTML = area_cone.toFixed(2) + "m²";
-    render_img.src = "cone.png";
+    render_img.src = "cone.svg";
+  } else {
+    document.getElementById("inf").innerText = 'Dados invalidos. Selecione uma das opções de formas';
   }
 }
